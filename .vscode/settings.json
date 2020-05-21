@@ -2,8 +2,10 @@
     "python.pythonPath": "/Users/anthony/source/react/csfinal/csfinal/bin/python3",
     "git.ignoreLimitWarning": true,
     "cSpell.words": [
+        "AMZN",
         "INNDCTAIZOPP",
         "apikey",
+        "chartjs",
         "machinelearn",
         "sklearn",
         "wfile"

@@ -27,7 +27,7 @@ export default (req, res) => {
             // Rechecking high and low bounds
             let min = Infinity;
             let max = -Infinity;
-            for (let j = 0; j < val.length; j++) {
+            for (let j = 0; j < val.length - 1; j++) {
                 if (val[j] > max) max = val[j];
                 if (val[j] < min) min = val[j];
             }

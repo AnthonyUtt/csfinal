@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-import { Line } from 'react-chartjs-2';
+import { Bar, Line } from 'react-chartjs-2';
 
 type DataSet = {
     label: string;
     data: number[];
-    borderColor: string;
-    fill: boolean;
-    lineTension: number;
+    borderColor?: string;
+    fill?: boolean;
+    lineTension?: number;
 };
 
 export type DataType = {
@@ -15,10 +15,12 @@ export type DataType = {
 }
 
 type PropTypes = {
-    chartData: DataType,
+    type?: 'line' | 'bar';
+    chartData: DataType;
+    options?: object;
 };
 
-const Chart = ({ chartData }: PropTypes) => {
+const Chart = ({ type, chartData, options }: PropTypes) => {
     const [ data, setData ] = useState<DataType>();
 
     useEffect(() => {
@@ -30,7 +32,11 @@ const Chart = ({ chartData }: PropTypes) => {
     if (!data) return null;
     
     return (
-        <Line data={data} options={{ elements: { point: { radius: 0 } } }} />
+        <>
+        {type === 'line'
+        ? <Line data={data} options={{ ...options, elements: { point: { radius: 0 } } }} />
+        : <Bar data={data} options={{ ...options }} />}
+        </>
     );
 };
 
