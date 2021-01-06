@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "chart.js": "^2.9.3",
     "ml-random-forest": "github:AnthonyUtt/random-forest",
     "ml-regression-multivariate-linear": "^2.0.3",
