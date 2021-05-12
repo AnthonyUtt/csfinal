@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "ml-random-forest": "github:AnthonyUtt/random-forest",
     "ml-regression-multivariate-linear": "^2.0.3",
     "next": "9.4.0",
